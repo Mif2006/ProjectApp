@@ -9,7 +9,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-4xl lg:text-6xl font-bold text-green-500 mb-6 mt-24 text-center"
+          className="text-7xl md:text-4xl lg:text-6xl font-bold text-green-500 mb-6 mt-24 text-center"
         >
           Новое поколение И.И.
         </motion.h1>
@@ -17,7 +17,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl lg:text-2xl text-white mb-10 text-center"
+          className="text-xl lg:text-2xl text-white mb-10 text-center"
         >
           Начните использовать прямо сейчас
         </motion.p>
