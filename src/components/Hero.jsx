@@ -9,7 +9,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-4xl lg:text-6xl font-bold text-green-500 mb-6 mt-24 text-center"
+          className="text-7xl md:text-4xl lg:text-6xl font-bold text-green-200 mb-6 mt-24 text-center"
         >
           Новое поколение И.И.
         </motion.h1>
