@@ -7,21 +7,21 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Анна Иванович",
       quote:
-        "I've been using this service for over a year now, and I'm consistently impressed with the quality of support and the innovative features they keep adding. It's made a significant difference in our workflow efficiency.",
+        "Я использую этот сервис уже более года, и каждый раз меня поражает качество поддержки и новые инновационные функции, которые они постоянно добавляют. Это значительно повлияло на нашу эффективность работы.",
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Мария Петрова",
       quote:
-        "This platform has transformed our marketing efforts. The ability to automate tasks and analyze data in real-time has given us a competitive edge. Plus, the user interface is intuitive and easy to navigate.",
+        "Эта платформа полностью трансформировала наши маркетинговые усилия. Возможность автоматизации задач и анализа данных в реальном времени дали нам конкурентное преимущество. Кроме того, интерфейс пользователя интуитивно понятен и легко навигируемый.",
     },
     {
       id: 3,
-      name: "David Johnson",
+      name: "Владимир Смирнов",
       quote:
-        "As a startup founder, I appreciate the cost-effectiveness and scalability of this tool. It's helped us grow our customer base and streamline operations without breaking the bank. Highly recommended!",
+        "Как основатель стартапа, я ценю экономическую эффективность и масштабируемость этого инструмента. Он помог нам увеличить нашу базу клиентов и оптимизировать операции без лишних затрат. Очень рекомендуем!",
     },
   ];
 
@@ -44,14 +44,15 @@ const Testimonials = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [controls]);
+
   return (
     <section
       className="bg-transparent bg-opacity-20 backdrop:filter backdrop-blur-md mx-10 py-16 md:mb-[100px]"
       id="testimonials"
     >
-      <div className=" mx-auto">
+      <div className="mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-10">
-          Testimonials
+          Отзывы пользователей
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           {testimonials.map((testimonial) => (
@@ -76,7 +77,7 @@ const Testimonials = () => {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <CustomButton text="Start Now" link="pricing" />
+          <CustomButton text="Начать сейчас" link="pricing" />
         </div>
       </div>
     </section>

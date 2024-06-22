@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center flex-row py-2 mt-3 bg-transparent">
+    <nav className="flex items-center text-center flex-row py-2 mt-3 bg-transparent">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -24,10 +24,10 @@ const Navbar = () => {
           initial={{ y: 20 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-300 hover:text-white mx-4 cursor-pointer"
+          className="text-gray-300  hover:text-white mx-4 cursor-pointer"
         >
           <Link to="features" smooth={true} duration={500} offset={-70}>
-            Features
+            Функции
           </Link>
         </motion.div>
         <motion.div
@@ -37,7 +37,7 @@ const Navbar = () => {
           className="text-gray-300 hover:text-white mx-4 cursor-pointer"
         >
           <Link to="testimonials" smooth={true} duration={500} offset={-70}>
-            Testimonials
+            Отзывы
           </Link>
         </motion.div>
         <motion.div
@@ -47,7 +47,7 @@ const Navbar = () => {
           className="text-gray-300 hover:text-white mx-4 cursor-pointer"
         >
           <Link to="faq" smooth={true} duration={500} offset={-70}>
-            FAQ
+            Часто задаваемые вопросы
           </Link>
         </motion.div>
         <motion.div
@@ -57,7 +57,7 @@ const Navbar = () => {
           className="text-gray-300 hover:text-white mx-4 cursor-pointer"
         >
           <Link to="pricing" smooth={true} duration={500} offset={-70}>
-            Pricing
+            Цены
           </Link>
         </motion.div>
       </motion.div>
@@ -69,7 +69,7 @@ const Navbar = () => {
       >
         <Link to="contact" smooth={true} duration={500} offset={-70}>
           <button className="text-[#00FF00] mr-6 border-[#00FF00] border-2 bg-transparent h-10 px-4 rounded-md hover:text-white font-semibold">
-            Contact
+            Связаться с нами
           </button>
         </Link>
       </motion.div>

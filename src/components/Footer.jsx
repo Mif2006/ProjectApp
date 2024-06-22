@@ -11,12 +11,12 @@ const Footer = () => {
               Automagify
             </h2>
             <p className="text-gray-400">
-              The Next generation of <br /> Artificial Inteligence
+              Следующее поколение <br /> Искусственного Интеллекта
             </p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4 text-green-400">
-              Useful Links
+              Полезные ссылки
             </h3>
             <ul className="text-gray-400 flex flex-col">
               <Link
@@ -26,7 +26,7 @@ const Footer = () => {
                 duration={500}
                 offset={-70}
               >
-                Home
+                Главная
               </Link>
               <Link
                 to="features"
@@ -35,7 +35,7 @@ const Footer = () => {
                 duration={500}
                 offset={-70}
               >
-                Features
+                Функции
               </Link>
               <Link
                 to="testimonials"
@@ -44,7 +44,7 @@ const Footer = () => {
                 duration={500}
                 offset={-70}
               >
-                Testimonials
+                Отзывы
               </Link>
               <Link
                 to="pricing"
@@ -53,21 +53,21 @@ const Footer = () => {
                 duration={500}
                 offset={-70}
               >
-                Pricing
+                Цены
               </Link>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4 text-green-500">
-              Contact Us
+              Свяжитесь с нами
             </h3>
             <p className="text-gray-400 mb-4">
-              Address: 1234 Main Street, Moscow, Russia
+              Адрес: 1234 Улица Гагарина, Москва, Россия
             </p>
             <p className="text-gray-400 mb-4">
-              Email: kamillamirbekkyzy@icloud.com
+              Электронная почта: kamillamirbekkyzy@icloud.com
             </p>
-            <p className="text-gray-400 mb-4">Phone: +12345678 </p>
+            <p className="text-gray-400 mb-4">Телефон: +12345678 </p>
           </div>
         </div>
         <hr className="my-8 border-gray-800" />

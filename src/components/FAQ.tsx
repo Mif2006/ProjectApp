@@ -1,31 +1,31 @@
-import React, { useState } from "react"; // Assuming you're going to create a separate CSS file
+import React, { useState } from "react";
 
 const FAQ = () => {
   const faqs = [
     {
-      title: "What is your AI-based SaaS?",
+      title: "Что такое Automagify?",
       content:
-        "Our AI-based SaaS offers advanced analytics and predictive capabilities tailored for businesses looking to leverage artificial intelligence to enhance decision-making processes.",
+        "Automagify предлагает передовые аналитические возможности и прогностические функции, разработанные специально для бизнеса, стремящегося использовать искусственный интеллект для улучшения процессов принятия решений.",
     },
     {
-      title: "How does it work?",
+      title: "Как это работает?",
       content:
-        "The platform uses machine learning algorithms to analyze vast amounts of data, providing insights and predictions that can guide strategic decisions.",
+        "Платформа использует алгоритмы машинного обучения для анализа огромных объемов данных, предоставляя инсайты и прогнозы, которые могут направлять стратегические решения.",
     },
     {
-      title: "Can you integrate with our existing systems?",
+      title: "Можете ли вы интегрироваться с нашей существующей системой?",
       content:
-        "Yes, we offer various integration options to ensure seamless connectivity with your current IT infrastructure.",
+        "Да, мы предлагаем различные варианты интеграции, чтобы обеспечить бесперебойное подключение к вашей текущей IT-инфраструктуре.",
     },
     {
-      title: "What kind of support do you offer?",
+      title: "Какую поддержку вы предоставляете?",
       content:
-        "We provide comprehensive support through email, phone, and live chat to assist you with any queries or issues.",
+        "Мы предоставляем комплексную поддержку через электронную почту, телефон и чат в режиме реального времени, чтобы помочь вам с любыми вопросами или проблемами.",
     },
     {
-      title: "Is there a trial period available?",
+      title: "Есть ли период пробного использования?",
       content:
-        "Absolutely, we offer a free trial period so you can experience our services firsthand before committing.",
+        "Конечно, мы предлагаем бесплатный период пробного использования, чтобы вы могли лично оценить наши услуги перед окончательным решением.",
     },
   ];
 
@@ -44,9 +44,9 @@ const FAQ = () => {
       id="faq"
       className="w-screen pb-[200px] flex items-center justify-center bg-transparent"
     >
-      <div className="bg-transparent flex flex-col gap-3 justify-center bg-opacity-20 backdrop-filter backdrop-blur-md py-16 md:py-6 p-6 min-h-[400px] w-[800px] rounded-lg shadow-md border">
+      <div className="bg-transparent flex flex-col gap-3 justify-center bg-opacity-20 backdrop-filter backdrop-blur-md py-16 md:py-6 p-6 min-h-[400px] w-[820px] rounded-lg shadow-md border">
         <h2 className="text-4xl text-green-200 font-semibold mb-4">
-          Frequently Asked Questions
+          Часто задаваемые вопросы
         </h2>
         <div className="flex flex-col gap-8 md:gap-6">
           {faqs.map((faq, index) => (

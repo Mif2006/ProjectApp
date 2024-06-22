@@ -21,63 +21,70 @@ const Pricing = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, [controls]);
 
   const pricingOptions = [
     {
       id: 1,
-      title: "Basic",
-      price: "$9.99",
+      title: "Базовый",
+      price: "₽3999",
       features: [
-        "Unlimited access to core functionalities",
-        "Priority customer support",
-        "Integration with essential tools",
+        "Неограниченный доступ к основным функциям",
+        "Приоритетная поддержка клиентов",
+        "Интеграция с ключевыми инструментами",
       ],
+      description:
+        "Подходит для начинающих и малых предприятий, желающих использовать AI для улучшения своих бизнес-процессов.",
     },
     {
       id: 2,
-      title: "Pro",
-      price: "$19.99",
+      title: "Профессиональный",
+      price: "₽5999",
       features: [
-        "All Basic features plus",
-        "Advanced analytics and reporting",
-        "Custom branding options",
-        "Dedicated account manager",
-        "Priority queue for customer support",
+        "Все функции Базового тарифа плюс",
+        "Расширенный анализ и отчетность",
+        "Опции брендинга под заказ",
+        "Лицейный менеджер по учету",
+        "Приоритетная очередь для поддержки клиентов",
       ],
+      description:
+        "Для средних предприятий, требующих более глубокого анализа данных и персонализированных решений AI.",
     },
     {
       id: 3,
-      title: "Premium",
-      price: "$29.99",
+      title: "Премиум",
+      price: "₽9999",
       features: [
-        "All Pro features plus",
-        "Custom integrations",
-        "Access to exclusive webinars and workshops",
-        "Monthly strategy session with a senior advisor",
-        "Guaranteed response time within 1 hour",
-        "Complimentary annual audit",
+        "Все функции Профессионального тарифа плюс",
+        "Кастомные интеграции",
+        "Доступ к эксклюзивным вебинарам и мастер-классам",
+        "Ежемесячные стратегические сессии с опытным консультантом",
+        "Гарантированный ответ в течение 1 часа",
+        "Комплексный ежегодный аудит бесплатно",
       ],
+      description:
+        "Для крупных компаний и организаций, которым требуется комплексное решение AI для управления данными и стратегическим планирования.",
     },
   ];
 
-  const [selectedPlan, setselectedPlan] = useState(null);
-  const [isModalOpen, setisModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChoosePlan = (plan) => {
-    setselectedPlan(plan);
-    setisModalOpen(true);
+    setSelectedPlan(plan);
+    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    setselectedPlan(null);
-    setisModalOpen(false);
+    setSelectedPlan(null);
+    setIsModalOpen(false);
   };
+
   return (
     <section className="bg-transparent px-10 py-16" id="pricing">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-green-200 text-center mb-10">
-          Pricing
+          Цены
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingOptions.map((option) => (
@@ -104,6 +111,9 @@ const Pricing = () => {
                 </ul>
               </div>
               <div className="mt-auto">
+                <motion.p className="text-gray-200 mb-6">
+                  {option.description}
+                </motion.p>
                 <motion.button
                   className="bg-white bg-opacity-20 hover:bg-opacity-70 text-green-500 hover:text-green-600 font-semibold rounded-full py-2 px-6 shadow-lg"
                   initial={{ opacity: 0, y: 10 }}
@@ -111,7 +121,7 @@ const Pricing = () => {
                   transition={{ duration: 0.8 }}
                   onClick={() => handleChoosePlan(option)}
                 >
-                  Choose Plan
+                  Выбрать план
                 </motion.button>
               </div>
             </motion.div>
@@ -122,7 +132,7 @@ const Pricing = () => {
       <Modal
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
-        contentLabel="Plan Details"
+        contentLabel="Details of the Plan"
         className="modal fixed inset-0 flex items-center justify-center"
         overlayClassName="modal-overlay fixed inset-0 bg-black bg-opacity-50"
       >
@@ -140,18 +150,14 @@ const Pricing = () => {
               <p className="text-green-500 text-2xl font-bold mb-6">
                 {selectedPlan.price}
               </p>
-              <ul className="text-gray-200 mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </ul>
+              <ul className="text-gray-200 mt-6">{selectedPlan.description}</ul>
             </div>
 
             <button
               onClick={handleCloseModal}
               className="bg-white bg-opacity-20 hover:bg-opacity-80 text-green-500 hover:text-green-600 font-semibold py-2 p-5 mx-6 rounded-full shadow-lg"
             >
-              Close
+              Закрыть
             </button>
           </motion.div>
         )}

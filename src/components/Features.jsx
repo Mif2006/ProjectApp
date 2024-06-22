@@ -18,39 +18,39 @@ const Features = () => {
   const features = [
     {
       icon: RxRocket,
-      title: "Automated Business Operations",
+      title: "Автоматизация бизнес-процессов",
       description:
-        "Streamline your operations with AI-driven automation, reducing manual tasks and increasing efficiency.",
+        "Упрощайте свои операции с помощью искусственного интеллекта, сокращая ручную работу и увеличивая эффективность.",
     },
     {
       icon: RxCodesandboxLogo,
-      title: "Content Creation Assistance",
+      title: "Помощь в создании контента",
       description:
-        "Generate engaging content automatically, tailored to your brand voice and audience preferences.",
+        "Автоматически генерируйте привлекательный контент, адаптированный под вашу брендовую позицию и предпочтения аудитории.",
     },
     {
       icon: RxIdCard,
-      title: "Personalized Customer Experiences",
+      title: "Индивидуализированные услуги",
       description:
-        "Deliver personalized experiences to your customers based on their interactions and preferences.",
+        "Создавайте уникальные предложения для каждого клиента, используя данные для понимания их потребностей и предпочтений.",
     },
     {
       icon: RxSketchLogo,
-      title: "Strategic Insights",
+      title: "Прогнозирование и анализ",
       description:
-        "Gain deep insights into your business performance and customer behavior to inform strategic decisions.",
+        "Анализируйте большие объемы данных для получения ценных инсайтов, которые помогут вам принимать обоснованные решения и прогнозировать тренды.",
     },
     {
       icon: RxEnvelopeClosed,
-      title: "Efficient Communication",
+      title: "Эффективное общение",
       description:
-        "Automate communication workflows to keep your team aligned and informed, improving collaboration.",
+        "Автоматизируйте рабочие процессы коммуникации, чтобы поддерживать команду в согласованном состоянии и информированной, улучшая сотрудничество.",
     },
     {
       icon: RxCamera,
-      title: "Dynamic Content Management",
+      title: "Динамическое управление контентом",
       description:
-        "Manage and optimize your content library with AI-powered recommendations and organization tools.",
+        "Управляйте и оптимизируйте свою библиотеку контента с помощью рекомендаций и инструментов организации на базе ИИ.",
     },
   ];
 
@@ -62,7 +62,7 @@ const Features = () => {
     >
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-100 text-center mb-10">
-          Key Features
+          Ключевые функции
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-12">
           {features.map((feature, index) => (
@@ -83,7 +83,7 @@ const Features = () => {
         </div>
       </div>
       <div className="flex justify-center mt-10">
-        <CustomButton text="Testimonials" link="testimonials" />
+        <CustomButton text="Отзывы" link="testimonials" />
       </div>
     </section>
   );
