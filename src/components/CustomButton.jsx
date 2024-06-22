@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 

@@ -1,4 +1,7 @@
 import {
+  Contact,
+  Cta,
+  FAQ,
   Features,
   Footer,
   Hero,
@@ -6,9 +9,7 @@ import {
   Pricing,
   Testimonials,
 } from "./components";
-import Cta from "./components/CTA";
-import Contact from "./components/Contact";
-import FAQ from "./components/FAQ";
+
 import MatrixRainingCode from "./components/MatrixRainingCode";
 
 function App() {
