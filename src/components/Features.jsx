@@ -74,7 +74,7 @@ const Features = () => {
               className="flex flex-col items-center"
             >
               <feature.icon className="w-16 h-16 text-green-500 mb-2" />
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-center text-white mb-2">
                 {feature.title}
               </h3>
               <p className="text-gray-300 text-center">{feature.description}</p>

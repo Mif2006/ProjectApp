@@ -68,7 +68,7 @@ const Navbar = () => {
         className="flex items-center"
       >
         <Link to="contact" smooth={true} duration={500} offset={-70}>
-          <button className="text-[#00FF00] mr-6 border-[#00FF00] border-2 bg-transparent h-10 px-4 rounded-md hover:text-white font-semibold">
+          <button className="text-[#00FF00] mr-6 border-[#00FF00] border-2 bg-transparent min-h-10 px-4 py-2 rounded-md hover:text-white font-semibold">
             Связаться с нами
           </button>
         </Link>

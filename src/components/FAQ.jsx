@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FAQ = () => {
   const faqs = [
@@ -61,12 +61,20 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left text-gray-200 py-2"
+                className="w-full text-left text-gray-200 py-2 "
               >
-                <span className="text-2xl font-medium">{faq.title}</span>
+                <span
+                  className={`text-2xl font-medium ${
+                    activeIndex !== index && "line-clamp-1"
+                  }`}
+                >
+                  {faq.title}
+                </span>
               </button>
               {activeIndex === index && (
-                <p className="pl-4 pb-2 text-md text-gray-200">{faq.content}</p>
+                <p className="pl-4 pb-2 text-md text-gray-200 ">
+                  {faq.content}
+                </p>
               )}
             </div>
           ))}
