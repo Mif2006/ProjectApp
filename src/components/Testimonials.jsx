@@ -1,29 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import app from "../../firebase"; // Adjust the path according to your file structure
 import { motion, useAnimation } from "framer-motion";
 import CustomButton from "./CustomButton";
 import { LuQuote } from "react-icons/lu";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Анна Иванович",
-      quote:
-        "Я использую этот сервис уже более года, и каждый раз меня поражает качество поддержки и новые инновационные функции, которые они постоянно добавляют. Это значительно повлияло на нашу эффективность работы.",
-    },
-    {
-      id: 2,
-      name: "Мария Петрова",
-      quote:
-        "Эта платформа полностью трансформировала наши маркетинговые усилия. Возможность автоматизации задач и анализа данных в реальном времени дали нам конкурентное преимущество. Кроме того, интерфейс пользователя интуитивно понятен и легко навигируемый.",
-    },
-    {
-      id: 3,
-      name: "Владимир Смирнов",
-      quote:
-        "Как основатель стартапа, я ценю экономическую эффективность и масштабируемость этого инструмента. Он помог нам увеличить нашу базу клиентов и оптимизировать операции без лишних затрат. Очень рекомендуем!",
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+  const db = getFirestore(app);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const querySnapshot = await getDocs(collection(db, "testimonials"));
+      const testimonialsArray = [];
+      querySnapshot.forEach((doc) => {
+        testimonialsArray.push({ ...doc.data(), id: doc.id });
+      });
+      setTestimonials(testimonialsArray);
+    };
+
+    fetchTestimonials();
+  }, []);
 
   const controls = useAnimation();
 
@@ -69,7 +66,7 @@ const Testimonials = () => {
                   {" "}
                   {testimonial.name}{" "}
                 </p>{" "}
-                {testimonial.quote}
+                {testimonial.testimonial}
               </div>
               <span className="flex text-end"></span>{" "}
               <LuQuote className="absolute -right-2 -bottom-2 h-[20px] w-[20px] text-green-400" />

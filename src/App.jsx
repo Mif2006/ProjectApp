@@ -9,6 +9,7 @@ import {
   Pricing,
   Testimonials,
 } from "./components";
+import Form from "./components/Form";
 
 import MatrixRainingCode from "./components/MatrixRainingCode";
 
@@ -26,6 +27,7 @@ function App() {
         <FAQ />
         <Pricing />
         <Contact />
+        <Form />
         <Footer />
       </div>
     </div>
