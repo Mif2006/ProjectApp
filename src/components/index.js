@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import CustomButton from "./CustomButton";
 import FAQ from "./FAQ";
 import Cta from "./CTA";
-import Contact from "./Contact";
+import Contact from "./contact/Contact";
 
 export {
   Navbar,
