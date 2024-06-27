@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import {
   Contact,
   Cta,
@@ -20,14 +21,31 @@ function App() {
 
       <div className="flex flex-col z-[20]">
         <Navbar />
-        <Hero />
-        <Features />
-        <Testimonials />
-        <Cta />
-        <FAQ />
-        <Pricing />
-        <Contact />
-        <Form />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Features />
+                <Testimonials />
+                <Cta />
+                <FAQ />
+                <Pricing />
+                <Contact />
+              </>
+            }
+          />
+          <Route
+            path="/Отзывы"
+            element={
+              <>
+                <Form />
+              </>
+            }
+          />
+        </Routes>
+
         <Footer />
       </div>
     </div>

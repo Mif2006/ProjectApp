@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,9 +11,11 @@ const Navbar = () => {
         transition={{ duration: 0.8, delay: 0 }}
         className="flex items-center"
       >
-        <h1 className="text-[#00FF00] cursor-pointer hover:text-white text-xl  font-bold ml-6">
-          Automagify
-        </h1>
+        <RouterLink to="/">
+          <h1 className="text-[#00FF00] cursor-pointer hover:text-white text-xl  font-bold ml-6">
+            Automagify
+          </h1>
+        </RouterLink>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -67,11 +70,11 @@ const Navbar = () => {
         transition={{ duration: 0.8, delay: 0 }}
         className="flex items-center"
       >
-        <Link to="contact" smooth={true} duration={500} offset={-70}>
+        <RouterLink to="/Отзывы" smooth={true} duration={500} offset={-70}>
           <button className="text-[#00FF00] mr-6 border-[#00FF00] border-2 bg-transparent min-h-10 px-4 py-2 rounded-md hover:text-white font-semibold">
-            Связаться с нами
+            Оставить Отзыв
           </button>
-        </Link>
+        </RouterLink>
       </motion.div>
     </nav>
   );

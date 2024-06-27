@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import app from "../../firebase"; // Adjust the path according to your file structure
+import { useState } from "react";
+import app from "../../firebase";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const db = getFirestore(app);
